@@ -24,8 +24,11 @@ body{
 </head>
 <body>
     <div id="lbl"></div>
+    <form>
+  <input type="button" value="Click me" onclick= 
+</form>
+</html>
 </body>
-
 <script>
     var weekday = new Array(7);
     weekday[0] = "DUMINICA";
@@ -35,12 +38,10 @@ body{
     weekday[4] = "JOI";
     weekday[5] = "VINERI";
     weekday[6] = "SAMBATA";
-
-    
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date = dayOfWeek+" " +(today.getMonth()+1)  + "/" + today.getDate()  +'/'+today.getFullYear()  ;
 
     var greet;
 
@@ -50,8 +51,7 @@ body{
         greet = 'BUNA ZIUA! ';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'BUNA SEARA!  ';
-
     document.getElementById('lbl').innerHTML =
         greet+=`<div id="date"> este ${date}</div>`;
+        
 </script> 
-</html>
